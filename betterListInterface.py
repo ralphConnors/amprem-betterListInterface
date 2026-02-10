@@ -45,7 +45,7 @@ class BetterInterface(ApiClient):
                 for n, key in enumerate(data_ids):
                     id_m = data_ids[key]
                     f_member = data_names.get(key, "Unknown")
-                    members_table.add_row(str(n + 1), f_member, "[HIDDEN FOR DEMONSTRATION]")
+                    members_table.add_row(str(n + 1), f_member, str(id_m))
                 console.print(Panel(members_table, title="[bold yellow]Members[/bold yellow]", border_style="blue"))
             except (FileNotFoundError, json.JSONDecodeError):
                 console.print("[bold red]Error: Could not read member data for display.[/bold red]")
@@ -85,7 +85,7 @@ class BetterInterface(ApiClient):
                 for n, key in enumerate(data_ids):
                     id_m = data_ids[key]
                     f_member = data_names.get(key, "Unknown")
-                    fronts_table.add_row(str(n + 1), f_member, "[HIDDEN FOR DEMONSTRATION]")
+                    fronts_table.add_row(str(n + 1), f_member, str(id_m))
                 console.print(Panel(fronts_table, title="[bold green]Custom Fronts[/bold green]", border_style="magenta"))
             except (FileNotFoundError, json.JSONDecodeError):
                 console.print("[bold red]Error: Could not read fronts data for display.[/bold red]")
