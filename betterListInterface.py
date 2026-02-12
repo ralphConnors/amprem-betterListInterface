@@ -198,7 +198,7 @@ def apply_patch():
             client_module.ApiClient.add_front = BetterInterface.modified_add_front
 
         else:
-            console.print("[bold red]Plugin: Could not find ApiClient in api_client.py")
+            console.print("[bold red]Plugin: Could not find ApiClient in api_client.py[/bold red]")
     else:
         print('Plugin: Could not find api_client.py')
 
